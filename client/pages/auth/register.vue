@@ -17,13 +17,12 @@
       :placeholder="item.placeholder"
     />
     <BaseButton
-      width="100%"
       padding="12px 8px"
       class="mt-20"
       name="Register"
       :loading="loading"
       :disabled="disabled"
-      @click="login"
+      @click="register"
     />
   </div>
 </template>
@@ -85,7 +84,7 @@ const disabled = computed(() => {
     : false;
 });
 
-const login = async () => {
+const register = async () => {
   loading.value = !loading.value;
   const transformData = transformToKeyModel(form.value)
   await userController.register({...transformData, bgColor: ''})

@@ -33,6 +33,7 @@
           width="45px"
           height="45px"
           :character="user.fristname[0] + user.lastname[0]"
+          :bg="user.bgColor"
         />
       </div>
     </div>

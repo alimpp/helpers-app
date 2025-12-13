@@ -11,7 +11,7 @@ export class UserDataModel extends BaseApp<any> {
       lastname: user.lastname,
       id: user.id,
       email: user.email,
-      bgColor: ''
+      bgColor: user.bgColor
     };
     this.saveItem(result);
     return result;

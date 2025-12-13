@@ -17,6 +17,7 @@
             width="55px"
             height="55px"
             :character="user.fristname[0] + user.lastname[0]"
+            :bg="user.bgColor"
           />
           <div class="flex flex-column justify-center px-5">
             <BaseTitle>{{ user.email }}</BaseTitle>
@@ -93,6 +94,12 @@ const items = ref([
     name: 'Dashboard',
     path: '/admin/dashboard',
     icon: 'mage:dashboard-chart',
+  },
+  {
+    id: 1,
+    name: 'Profile',
+    path: '/admin/profile',
+    icon: 'solar:user-broken',
   }
 ]);
 
