@@ -1,0 +1,38 @@
+@import url("./theme_colors.scss");
+
+.border-primary {
+  border: 1px solid var(--primary-) !important;
+  color: var(--primary-) !important;
+}
+.border-bottom-primary {
+  border-bottom: 1px solid var(--primary-) !important;
+  color: var(--primary-) !important;
+}
+.border-secondary {
+  border: 1px solid var(--secondary-) !important;
+  color: var(--secondary-) !important;
+}
+.border-success {
+  border: 1px solid var(--success-) !important;
+  color: var(--success-) !important;
+}
+.border-info {
+  border: 1px solid var(--info-) !important;
+  color: var(--info-) !important;
+}
+.border-warning {
+  border: 1px solid var(--warning-) !important;
+  color: var(--warning-) !important;
+}
+.border-danger {
+  border: 1px solid var(--danger-) !important;
+  color: var(--danger-) !important;
+}
+.border-red {
+  border: 1px solid var(--red-) !important;
+  color: var(--red-) !important;
+}
+.border-gray {
+  border: 1px solid var(--gray-) !important;
+  color: var(--gray-) !important;
+}

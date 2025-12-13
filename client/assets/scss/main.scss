@@ -1,0 +1,141 @@
+@import url("./background.scss");
+@import url("./colors.scss");
+@import url("./flex.scss");
+@import url("./font_weight.scss");
+@import url("./animations.scss");
+@import url("./border.scss");
+@import url("./fonts.scss");
+@import url("./transitions.scss");
+* {
+  font-family: "app";
+  margin: 0;
+  padding: 0;
+}
+
+@for $i from 1 through 100 {
+  .w-#{$i} {
+    width: #{$i}#{"%"};
+  }
+}
+
+@for $i from 1 through 500 {
+  .w-#{$i}-px {
+    width: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .h-#{$i}-dvh {
+    height: #{$i}dvh;
+  }
+}
+
+@for $i from 1 through 500 {
+  .h-#{$i}-px {
+    height: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .f-s-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .px-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .py-#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .mx-#{$i} {
+    margin-left: #{$i}px;
+    margin-right: #{$i}px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .my-#{$i} {
+    margin-top: #{$i}px;
+    margin-bottom: #{$i}px;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.border-rounded {
+  border-radius: 5px;
+}
+
+.border-circle {
+  border-radius: 50%;
+}
+
+.y-scroll {
+  overflow-y: scroll;
+}
+
+.y-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.container {
+  padding: 10px 300px;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 10px 150px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding: 10px 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 10px 20px;
+  }
+}

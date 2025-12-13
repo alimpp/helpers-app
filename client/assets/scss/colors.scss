@@ -1,0 +1,73 @@
+@import url("./theme_colors.scss");
+
+// primary colors
+.color-primary-1 {
+  color: var(--primary1-);
+}
+.color-primary-2 {
+  color: var(--primary2-);
+}
+.color-primary-3 {
+  color: var(--primary3-);
+}
+.color-primary-4 {
+  color: var(--primary4-);
+}
+
+// secondary colors
+.color-secondary-1 {
+  color: var(--secondary1-);
+}
+.color-secondary-2 {
+  color: var(--secondary2-);
+}
+.color-secondary-3 {
+  color: var(--secondary3-);
+}
+.color-secondary-4 {
+  color: var(--secondary4-);
+}
+
+// warning colors
+.color-warning-1 {
+  color: var(--warning1-);
+}
+.color-warning-2 {
+  color: var(--warning2-);
+}
+
+// gray colors
+.color-gray-1 {
+  color: var(--gray1-);
+}
+.color-gray-2 {
+  color: var(--gray2-);
+}
+.color-gray-3 {
+  color: var(--gray3-);
+}
+
+// danger colors
+.color-danger-1 {
+  color: var(--danger1-);
+}
+.color-danger-2 {
+  color: var(--danger2-);
+}
+.color-danger-3 {
+  color: var(--danger3-);
+}
+
+.color-dark-1 {
+  color: var(--dark1-);
+}
+.color-dark-2 {
+  color: var(--dark2-);
+}
+.color-dark-3 {
+  color: var(--dark3-);
+}
+
+.color-white {
+  color: var(--white-);
+}

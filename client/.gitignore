@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+
+# Nuxt.js build output
+.nuxt/
+.output/
+
+# Cache directories
+.cache/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
