@@ -93,13 +93,7 @@ const items = ref([
     name: 'Dashboard',
     path: '/admin/dashboard',
     icon: 'mage:dashboard-chart',
-  },
-  {
-    id: 11,
-    name: 'Settings',
-    path: '/admin/settings',
-    icon: 'uil:setting',
-  },
+  }
 ]);
 
 const navigate = (path) => {
