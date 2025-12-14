@@ -5,24 +5,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getBreadCrumbSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="
-          getBreadCrumbSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'
-        "
+        :bg="getBreadCrumbSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setBreadCrumbSize('standard')"
       />
       <BaseButton
         :icon="getBreadCrumbSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="
-          getBreadCrumbSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'
-        "
+        :bg="getBreadCrumbSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setBreadCrumbSize('semiBold')"
       />
       <BaseButton
         :icon="getBreadCrumbSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getBreadCrumbSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getBreadCrumbSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setBreadCrumbSize('bold')"
       />
@@ -33,7 +29,7 @@
       <BaseButton
         :icon="getSidebarItemsSize == 'standard' ? 'bi:patch-check' : ''"
         :bg="
-          getSidebarItemsSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'
+          getSidebarItemsSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'
         "
         name="Standard"
         @click="setSidebarItemsSize('standard')"
@@ -41,7 +37,7 @@
       <BaseButton
         :icon="getSidebarItemsSize == 'semiBold' ? 'bi:patch-check' : ''"
         :bg="
-          getSidebarItemsSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'
+          getSidebarItemsSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'
         "
         name="Semi Bold"
         class="mx-10"
@@ -49,7 +45,7 @@
       />
       <BaseButton
         :icon="getSidebarItemsSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getSidebarItemsSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getSidebarItemsSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setSidebarItemsSize('bold')"
       />
@@ -59,20 +55,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getDividerSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="getDividerSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getDividerSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setDividerSize('standard')"
       />
       <BaseButton
         :icon="getDividerSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="getDividerSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getDividerSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setDividerSize('semiBold')"
       />
       <BaseButton
         :icon="getDividerSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getDividerSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getDividerSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setDividerSize('bold')"
       />
@@ -82,20 +78,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getTitleSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="getTitleSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getTitleSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setTitleSize('standard')"
       />
       <BaseButton
         :icon="getTitleSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="getTitleSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getTitleSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setTitleSize('semiBold')"
       />
       <BaseButton
         :icon="getTitleSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getTitleSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getTitleSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setTitleSize('bold')"
       />
@@ -107,20 +103,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getSubTitleSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="getSubTitleSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getSubTitleSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setSubTitleSize('standard')"
       />
       <BaseButton
         :icon="getSubTitleSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="getSubTitleSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getSubTitleSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setSubTitleSize('semiBold')"
       />
       <BaseButton
         :icon="getSubTitleSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getSubTitleSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getSubTitleSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setSubTitleSize('bold')"
       />
@@ -133,20 +129,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getTextSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="getTextSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getTextSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setTextSize('standard')"
       />
       <BaseButton
         :icon="getTextSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="getTextSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getTextSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setTextSize('semiBold')"
       />
       <BaseButton
         :icon="getTextSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getTextSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getTextSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setTextSize('bold')"
       />
@@ -159,24 +155,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getDescrptionSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="
-          getDescrptionSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'
-        "
+        :bg="getDescrptionSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setDescrptionSize('standard')"
       />
       <BaseButton
         :icon="getDescrptionSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="
-          getDescrptionSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'
-        "
+        :bg="getDescrptionSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setDescrptionSize('semiBold')"
       />
       <BaseButton
         :icon="getDescrptionSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getDescrptionSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getDescrptionSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setDescrptionSize('bold')"
       />
@@ -189,20 +181,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getLabelSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="getLabelSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getLabelSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setLabelSize('standard')"
       />
       <BaseButton
         :icon="getLabelSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="getLabelSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getLabelSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setLabelSize('semiBold')"
       />
       <BaseButton
         :icon="getLabelSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getLabelSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getLabelSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setLabelSize('bold')"
       />
@@ -212,20 +204,20 @@
     <div class="flex align-center mt-10">
       <BaseButton
         :icon="getDateSize == 'standard' ? 'bi:patch-check' : ''"
-        :bg="getDateSize == 'standard' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getDateSize == 'standard' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Standard"
         @click="setDateSize('standard')"
       />
       <BaseButton
         :icon="getDateSize == 'semiBold' ? 'bi:patch-check' : ''"
-        :bg="getDateSize == 'semiBold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getDateSize == 'semiBold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Semi Bold"
         class="mx-10"
         @click="setDateSize('semiBold')"
       />
       <BaseButton
         :icon="getDateSize == 'bold' ? 'bi:patch-check' : ''"
-        :bg="getDateSize == 'bold' ? 'bg-secondary-1' : 'bg-primary-1'"
+        :bg="getDateSize == 'bold' ? 'bg-primary-1' : 'bg-primary-2'"
         name="Bold"
         @click="setDateSize('bold')"
       />
