@@ -97,6 +97,24 @@ const items = ref([
     path: '/',
     icon: 'mage:dashboard-chart',
   },
+  {
+    id: 1,
+    name: 'Entry & Exit',
+    path: '/dashboard/entry',
+    icon: 'solar:clipboard-linear',
+  },
+  {
+    id: 2,
+    name: 'Tasks',
+    path: '/dashboard/tasks',
+    icon: 'solar:clipboard-list-outline',
+  },
+  {
+    id: 3,
+    name: 'Notes',
+    path: '/dashboard/notes',
+    icon: 'solar:notebook-broken',
+  },
 ]);
 
 const navigate = (path) => {
