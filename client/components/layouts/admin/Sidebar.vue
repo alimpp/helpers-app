@@ -21,7 +21,9 @@
           />
           <div class="flex flex-column justify-center px-5">
             <BaseTitle>{{ user.email }}</BaseTitle>
-            <BaseSubTitle class="color-gray-1">{{ user.fristname }} {{ user.lastname }}</BaseSubTitle>
+            <BaseSubTitle class="color-gray-1"
+              >{{ user.fristname }} {{ user.lastname }}</BaseSubTitle
+            >
           </div>
         </div>
         <div class="flex justify-end w-50 align-center">
@@ -53,11 +55,11 @@
 </template>
 
 <script setup>
-const userStore = useUserStore()
+const userStore = useUserStore();
 
 const user = computed(() => {
-  return userStore.getUser
-})
+  return userStore.getUser;
+});
 
 const applicationStore = useApplicationStore();
 
@@ -92,15 +94,9 @@ const items = ref([
   {
     id: 0,
     name: 'Dashboard',
-    path: '/admin/dashboard',
+    path: '/',
     icon: 'mage:dashboard-chart',
   },
-  {
-    id: 1,
-    name: 'Profile',
-    path: '/admin/profile',
-    icon: 'solar:user-broken',
-  }
 ]);
 
 const navigate = (path) => {

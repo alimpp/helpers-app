@@ -18,4 +18,7 @@ export default defineNuxtConfig({
     autoImport: true,
     dirs: ['stores'],
   },
+  devServer: {
+    port: 5050
+  }
 });

@@ -26,7 +26,9 @@
 </template>
 
 <script setup>
-const sideMenuState = ref(true);
+const { width } = useScreenSize();
+
+const sideMenuState = ref(false);
 const chnageSideMenuState = () => {
   sideMenuState.value = !sideMenuState.value;
 };
@@ -34,6 +36,10 @@ const chnageSideMenuState = () => {
 const applicationStore = useApplicationStore();
 const appTheme = computed(() => {
   return applicationStore._state.theme;
+});
+
+onMounted(() => {
+  if (width.value > 850) sideMenuState.value = true;
 });
 </script>
 

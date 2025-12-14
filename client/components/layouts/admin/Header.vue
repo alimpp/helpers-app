@@ -21,6 +21,11 @@
           :count="unReadCount"
         />
         <BaseIcon
+          name="solar:user-broken"
+          class="cursor-pointer"
+          @click="profileModal = true"
+        />
+        <BaseIcon
           @click="settingModal = true"
           class="cursor-pointer mx-5"
           name="solar:settings-outline"
@@ -29,6 +34,7 @@
           v-if="route.path != '/admin/settings'"
         />
         <BaseAvatar
+          @click="profileModal = true"
           v-if="!sideMenuState"
           width="45px"
           height="45px"
@@ -39,6 +45,7 @@
     </div>
 
     <SettingsModal :isOpen="settingModal" @close="settingModal = false" />
+    <ProfileModal :isOpen="profileModal" @close="profileModal = false" />
   </div>
 </template>
 
@@ -49,6 +56,7 @@ const route = useRoute();
 const props = defineProps({ sideMenuState: { default: false } });
 
 const settingModal = ref(false);
+const profileModal = ref(false);
 
 const applicationStore = useApplicationStore();
 const appTheme = computed(() => {
@@ -56,14 +64,14 @@ const appTheme = computed(() => {
 });
 
 const unReadCount = computed(() => {
-  return 0
+  return 0;
 });
 
-const userStore = useUserStore()
+const userStore = useUserStore();
 
 const user = computed(() => {
-  return userStore.getUser
-})
+  return userStore.getUser;
+});
 
 const emit = defineEmits(['chnageSideMenuState']);
 
