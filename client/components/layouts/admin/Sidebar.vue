@@ -76,6 +76,7 @@ const route = useRoute();
 const emit = defineEmits(['chnageSideMenuState']);
 
 const props = defineProps({
+  items: { default: [] },
   isOpen: {
     default: 'true',
     type: Boolean,
@@ -89,33 +90,6 @@ const unReadCount = computed(() => {
 const chnageSideMenuState = () => {
   emit('chnageSideMenuState');
 };
-
-const items = ref([
-  {
-    id: 0,
-    name: 'Home',
-    path: '/',
-    icon: 'solar:home-outline',
-  },
-  {
-    id: 1,
-    name: 'Entry',
-    path: '/dashboard/entry',
-    icon: 'solar:clipboard-linear',
-  },
-  {
-    id: 2,
-    name: 'Tasks',
-    path: '/dashboard/tasks',
-    icon: 'solar:clipboard-list-outline',
-  },
-  {
-    id: 3,
-    name: 'Notes',
-    path: '/dashboard/notes',
-    icon: 'solar:notebook-broken',
-  },
-]);
 
 const navigate = (path) => {
   const osWidth = window.screen.width;

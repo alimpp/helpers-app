@@ -37,36 +37,9 @@ const appTheme = computed(() => {
   return applicationStore._state.theme;
 });
 
-const getSidebarItemsSize = computed(() => {
-  return applicationStore._state.sidebarItems;
+const props = defineProps({
+  items: { default: [] },
 });
-
-const items = ref([
-  {
-    id: 0,
-    name: 'Home',
-    path: '/',
-    icon: 'solar:home-outline',
-  },
-  {
-    id: 1,
-    name: 'Entry',
-    path: '/dashboard/entry',
-    icon: 'solar:clipboard-linear',
-  },
-  {
-    id: 2,
-    name: 'Tasks',
-    path: '/dashboard/tasks',
-    icon: 'solar:clipboard-list-outline',
-  },
-  {
-    id: 3,
-    name: 'Notes',
-    path: '/dashboard/notes',
-    icon: 'solar:notebook-broken',
-  },
-]);
 </script>
 
 <style scoped lang="scss">

@@ -15,13 +15,19 @@
     </div>
     <div class="w-100 flex flex-column">
       <LayoutsAdminHeader
+        :items="items"
         :sideMenuState="sideMenuState"
         @chnageSideMenuState="chnageSideMenuState"
       />
-      <div class="router-content overflow-hidden">
+      <div
+        class="router-content overflow-hidden"
+        @touchstart="onTouchStart"
+        @touchmove="onTouchMove"
+        @touchend="onTouchEnd"
+      >
         <NuxtPage />
       </div>
-      <LayoutsAdminMobileNav v-if="width < 800" />
+      <LayoutsAdminMobileNav :items="items" v-if="width < 800" />
     </div>
   </div>
 </template>
@@ -48,6 +54,70 @@ watch(
   },
   { deep: true }
 );
+
+const items = ref([
+  {
+    id: 0,
+    name: 'Home',
+    path: '/',
+    icon: 'solar:home-outline',
+  },
+  {
+    id: 1,
+    name: 'Entry',
+    path: '/dashboard/entry',
+    icon: 'solar:clipboard-linear',
+  },
+  {
+    id: 2,
+    name: 'Tasks',
+    path: '/dashboard/tasks',
+    icon: 'solar:clipboard-list-outline',
+  },
+  {
+    id: 3,
+    name: 'Notes',
+    path: '/dashboard/notes',
+    icon: 'solar:notebook-broken',
+  },
+]);
+
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+const startX = ref(0);
+const endX = ref(0);
+
+const onTouchStart = (e) => {
+  startX.value = e.touches[0].clientX;
+};
+
+const onTouchMove = (e) => {
+  endX.value = e.touches[0].clientX;
+};
+
+const onTouchEnd = () => {
+  const delta = endX.value - startX.value;
+  const currentPath = items.value.find((item) => {
+    return item.path == route.path;
+  });
+
+  if (delta > 300) {
+    const target = items.value[currentPath.id - 1];
+    if (target) {
+      navigateTo(target.path);
+    } else {
+      navigateTo(items.value[items.value.length - 1].path);
+    }
+  } else if (delta < -300) {
+    const target = items.value[currentPath.id + 1];
+    if (target) {
+      navigateTo(target.path);
+    } else {
+      navigateTo(items.value[0].path);
+    }
+  }
+};
 
 onMounted(() => {
   if (width.value > 800) sideMenuState.value = true;
