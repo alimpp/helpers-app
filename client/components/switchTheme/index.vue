@@ -2,7 +2,7 @@
   <div class="flex flex-column">
     <div class="flex mt-15">
       <span
-        :class="{ 'bg-primary-1': appTheme == 'dark' }"
+        :class="{ 'bg-primary-2': appTheme == 'dark' }"
         class="flex align-center f-s-12 f-w-600 px-15 py-5 border-rounded cursor-pointer"
         @click="setTheme('dark')"
       >
@@ -10,7 +10,7 @@
         Dark
       </span>
       <span
-        :class="{ 'bg-primary-1': appTheme == 'light' }"
+        :class="{ 'bg-primary-2': appTheme == 'light' }"
         class="flex align-center f-s-12 f-w-600 px-15 py-5 border-rounded cursor-pointer mx-10"
         @click="setTheme('light')"
       >

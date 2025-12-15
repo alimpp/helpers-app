@@ -1,75 +1,73 @@
 <template>
-  <div class="iranian-calendar">
-    <div class="calendar-header">
-      <BaseIcon
-        name="solar:map-arrow-left-bold-duotone"
-        @click="prevMonth"
-        class="cursor-pointer"
-      />
+  <div class="w-350-px">
+    <BaseCard>
+      <div class="calendar-header">
+        <BaseIcon
+          name="solar:map-arrow-left-bold-duotone"
+          @click="prevMonth"
+          class="cursor-pointer"
+        />
 
-      <div class="month-year-display">
-        <h2>{{ currentMonthName }} {{ currentYear }}</h2>
-        <div class="month-year-subtitle">
-          {{ getGregorianMonthYear() }}
+        <div>
+          <h2>{{ currentMonthName }} {{ currentYear }}</h2>
+          <div class="color-gray-1">
+            {{ getGregorianMonthYear() }}
+          </div>
         </div>
+
+        <BaseIcon
+          name="solar:map-arrow-right-bold-duotone"
+          @click="nextMonth"
+          class="cursor-pointer"
+        />
       </div>
 
-      <BaseIcon
-        name="solar:map-arrow-right-bold-duotone"
-        @click="nextMonth"
-        class="cursor-pointer"
-      />
-    </div>
-
-    <div class="calendar-grid">
-      <div class="weekdays">
-        <div v-for="day in englishWeekdays" :key="day" class="f-s-10">
-          {{ day }}
+      <div class="calendar-grid">
+        <div class="weekdays">
+          <div v-for="day in englishWeekdays" :key="day" class="f-s-10">
+            {{ day }}
+          </div>
         </div>
-      </div>
 
-      <div class="days">
-        <div
-          v-for="(dayInfo, index) in calendarDays"
-          :key="index"
-          class="bg-primary-2"
-          :class="[
-            'day',
-            {
-              today: dayInfo.isToday,
+        <div class="days">
+          <div
+            v-for="(dayInfo, index) in calendarDays"
+            :key="index"
+            class="day"
+            :class="{
+              'bg-primary-1': dayInfo.isToday,
               holiday: dayInfo.isHoliday,
               selected: isSelected(dayInfo),
               'other-month': !dayInfo.isCurrentMonth,
               weekend: dayInfo.isWeekend,
               'has-event': hasEvent(dayInfo),
-              'bg-primary-4': dayInfo.isToday,
-            },
-          ]"
-          @click="selectDate(dayInfo)"
-          :title="getDayTooltip(dayInfo)"
-        >
-          <div class="day-content">
-            <span class="day-number">{{ dayInfo.day }}</span>
-            <div class="day-indicators">
-              <span
-                v-if="dayInfo.isHoliday"
-                class="holiday-indicator"
-                title="Holiday"
-              ></span>
-              <span
-                v-if="hasEvent(dayInfo)"
-                class="event-indicator"
-                title="Has Event"
-                >★</span
-              >
+            }"
+            @click="selectDate(dayInfo)"
+            :title="getDayTooltip(dayInfo)"
+          >
+            <div class="day-content">
+              <span class="day-number">{{ dayInfo.day }}</span>
+              <div class="day-indicators">
+                <span
+                  v-if="dayInfo.isHoliday"
+                  class="holiday-indicator"
+                  title="Holiday"
+                ></span>
+                <span
+                  v-if="hasEvent(dayInfo)"
+                  class="event-indicator"
+                  title="Has Event"
+                  >★</span
+                >
+              </div>
             </div>
-          </div>
-          <div v-if="dayInfo.isHoliday" class="holiday-label">
-            {{ getHolidayName(dayInfo) }}
+            <div v-if="dayInfo.isHoliday" class="holiday-label">
+              {{ getHolidayName(dayInfo) }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </BaseCard>
   </div>
 </template>
 
@@ -332,11 +330,6 @@ watch(
 
 <style scoped>
 .iranian-calendar {
-  font-family:
-    'Segoe UI',
-    system-ui,
-    -apple-system,
-    sans-serif;
   width: 350px;
   margin: 0 auto;
   background: #000;
@@ -446,7 +439,8 @@ watch(
   background: #e3e8ff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-color: #0046ff;
+  border-color: #4570e7;
+  color: #4570e7;
 }
 
 .day-content {
@@ -458,7 +452,6 @@ watch(
 .day-number {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2f62ee;
 }
 
 .day-indicators {

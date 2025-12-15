@@ -21,11 +21,14 @@
       <div class="router-content overflow-hidden">
         <NuxtPage />
       </div>
+      <LayoutsAdminMobileNav v-if="width < 800" />
     </div>
   </div>
 </template>
 
 <script setup>
+import { watch } from 'vue';
+
 const { width } = useScreenSize();
 
 const sideMenuState = ref(false);
@@ -38,8 +41,16 @@ const appTheme = computed(() => {
   return applicationStore._state.theme;
 });
 
+watch(
+  () => width.value,
+  (oldVal, newVal) => {
+    if (width.value < 800) sideMenuState.value = false;
+  },
+  { deep: true }
+);
+
 onMounted(() => {
-  if (width.value > 850) sideMenuState.value = true;
+  if (width.value > 800) sideMenuState.value = true;
 });
 </script>
 

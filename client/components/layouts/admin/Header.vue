@@ -8,11 +8,18 @@
       }"
     >
       <div class="w-50 flex px-10 align-center">
+        <img
+          src="/public/logo/logo-app.svg"
+          alt="logo"
+          width="45"
+          height="45"
+        />
         <BaseIcon
           class="cursor-pointer"
           width="30"
           name="gg:menu-right"
           @click="chnageSideMenuState"
+          v-if="width > 800"
         />
       </div>
       <div class="w-50 flex justify-end px-10 align-center">
@@ -50,6 +57,8 @@
 </template>
 
 <script setup>
+const { width } = useScreenSize();
+
 import { useRoute } from 'vue-router';
 const route = useRoute();
 

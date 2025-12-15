@@ -2,7 +2,7 @@
   <div class="flex flex-column">
     <span
       v-if="title"
-      class="color-primary-4"
+      class="color-gray-1"
       :class="{
         'f-s-10': getDividerSize == 'standard',
         'f-s-12': getDividerSize == 'semiBold',

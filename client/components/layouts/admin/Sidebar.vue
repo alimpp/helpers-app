@@ -93,13 +93,13 @@ const chnageSideMenuState = () => {
 const items = ref([
   {
     id: 0,
-    name: 'Dashboard',
+    name: 'Home',
     path: '/',
-    icon: 'mage:dashboard-chart',
+    icon: 'solar:home-outline',
   },
   {
     id: 1,
-    name: 'Entry & Exit',
+    name: 'Entry',
     path: '/dashboard/entry',
     icon: 'solar:clipboard-linear',
   },
@@ -146,7 +146,7 @@ const navigate = (path) => {
   padding: 0 10px;
   transition: 1s;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .container-sidebar {
     position: fixed;
     z-index: 100;
