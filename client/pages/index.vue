@@ -1,5 +1,7 @@
 <template>
   <div class="flex flex-column">
+    <PersianCalendar v-model="selectedDate" />
+    {{ selectedDate }}
     <div class="container">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
       laudantium minima, fugit impedit ea id molestiae inventore? Asperiores
@@ -13,4 +15,6 @@
 definePageMeta({
   middleware: 'auth',
 });
+
+const selectedDate = ref(null);
 </script>
