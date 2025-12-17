@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Entry } from 'src/entities/entry';
 import { Repository } from 'typeorm';
+
 import { AddDto } from './dto/add';
 import { UpdateDto } from './dto/update';
 
