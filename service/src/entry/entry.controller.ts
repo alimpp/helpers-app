@@ -11,9 +11,10 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth/jwt-auth.guard';
+import { EntryService } from './entry.service';
+
 import { AddDto } from './dto/add';
 import { UpdateDto } from './dto/update';
-import { EntryService } from './entry.service';
 
 @UseGuards(JwtAuthGuard)
 @Controller('entry')
